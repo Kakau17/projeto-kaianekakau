@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const sqlite3 = require('sqlite3').verbose();
-const DBPATH = '../data/banco.db';
+const DBPATH = './SRC/data/banco.db';
 
 const hostname = '127.0.0.3';
 const port = 3034;
@@ -11,7 +11,7 @@ const app = express();
 
 /* Servidor aplicação */
 
-app.use(express.static("../frontend/"));
+app.use(express.static("./SRC/frontend/"));
 /* Definição dos endpoints */
 
 app.use(express.json());
